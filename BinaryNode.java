@@ -106,6 +106,19 @@ class BinaryNode<T>
     * prints (using post-order traversal) all nodes of the subtree rooted at "this" node */
    public void postorderTraverse_binaryNodeMethod()
    {
+      
+      if (leftChild != null) {
+         BinaryNode<T> newLeft = this.getLeftChild();
+         newLeft.postorderTraverse_binaryNodeMethod();
+      }
+
+      if (rightChild != null) {
+         BinaryNode<T> newRight = this.getRightChild();
+         newRight.postorderTraverse_binaryNodeMethod();
+      }
+      
+      System.out.println(this.getData());
+
    }
    
    /**-------------------------------------------------------------------- 
