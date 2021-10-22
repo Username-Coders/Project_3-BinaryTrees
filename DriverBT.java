@@ -1,8 +1,7 @@
 public class DriverBT 
 {
 	public static void main(String[] args)
-	{	
-	
+	{
 		System.out.println("1st Testing Example:");
 		BinaryTree<String> aTree = new BinaryTree<>();
 		createTree1(aTree);
@@ -10,10 +9,9 @@ public class DriverBT
 		System.out.println("(binaryTree) post-order: ");
 		aTree.postorderTraverse();
 		
-		
 		System.out.println("(binaryNode) post-order: ");
 		aTree.postorderTraverse_callBinaryNodeMethod();
-		/*
+		
 		System.out.println();
 		
 		System.out.println("(BinaryTree) Height of tree is " + aTree.getHeight());
@@ -27,9 +25,6 @@ public class DriverBT
 		System.out.println("==========================================");
 		System.out.println();
 		
-		*/
-
-
 		System.out.println("2nd Testing Example:");
 		BinaryTree<String> aTree2 = new BinaryTree<>();
 		createTree2(aTree2);
@@ -40,7 +35,6 @@ public class DriverBT
 		System.out.println("(binaryNode) post-order: ");
 		aTree2.postorderTraverse_callBinaryNodeMethod();
 		
-		/*
 		System.out.println();
 		
 		System.out.println("(BinaryTree) Height of tree is " + aTree2.getHeight());
@@ -52,8 +46,6 @@ public class DriverBT
 		System.out.println("(BinaryNode) # nodes of tree is " + aTree2.getNumberOfNodes_callBinaryNodeMethod());
 		
 		System.out.println("Done.");
-		*/
-
 	}  // end main
 
 	public static void createTree1(BinaryTree<String> tree)
@@ -85,29 +77,6 @@ public class DriverBT
 	/**Task 4: Create a tree case as shown in assignment 3*/
 	public static void createTree2(BinaryTree<String> tree)
 	{ 
-		
-		// Leaves
-		BinaryTree<String> bTree = new BinaryTree<>("B");
-		BinaryTree<String> fTree = new BinaryTree<>("F");
-		BinaryTree<String> gTree = new BinaryTree<>("G");	
-		BinaryTree<String> hTree = new BinaryTree<>("H");
-
-		// Subtrees:
-		BinaryTree<String> eTree = new BinaryTree<>("E", gTree, hTree);
-		BinaryTree<String> dTree = new BinaryTree<>("D", fTree, null);
-		BinaryTree<String> cTree = new BinaryTree<>("C", dTree, eTree);
-		
-		tree.setTree("A", bTree, cTree);
-		
-		System.out.println("\nGiven Tree:\n");
-		System.out.println("     A         ");
-		System.out.println("   /   \\      ");
-		System.out.println("  B     C      ");
-		System.out.println("       / \\    ");
-		System.out.println("      D    E   ");
-		System.out.println("     /    / \\ ");
-		System.out.println("    F    G    H");
-		System.out.println();
 
 	} // end createTree2
 
