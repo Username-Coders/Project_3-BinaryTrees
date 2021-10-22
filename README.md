@@ -40,14 +40,10 @@ CS 2400 Project 3 Binary Trees - Tree Operations
   <li>public static void createTree2(BinaryTree<String> tree)  (Name goes here)</li>
 </ul>
 
-Javadoc comments (Name goes here)
-
 Screencast recording, talk about your code briefly, less than 3 minutes (All members)
 
 Unit testing on added methods using unit test framework (Priscilla Ballesteros)
 
-## iii) Link to Javadoc:
 
-
-## iv) Link to screencast:
+## iii) Link to screencast:
 
