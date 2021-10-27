@@ -23,8 +23,9 @@ class BinaryNode<T>
    } // end constructor
 
    /** Retrieves the data portion of this node.
+    * @param leftChild2
        @return  The object in the data portion of the node. */
-   public T getData()
+   public T getData(BinaryNode<T> leftChild2)
    {
       return data;
    } // end getData
@@ -126,19 +127,27 @@ class BinaryNode<T>
    /** A Recursive Method in the BinaryNode Class   
     * Computes the height of the subtree rooted at "this" node.
    @return  The height of the subtree rooted at "this" node. */
-   public int getHeight_binaryNodeMethod(BinaryNode<T> node)
+   public int getHeight_binaryNodeMethod()
    {  
-      if(node == null)
+      int leftHeight = 0 ;
+      int rightHeight = 0 ;
+
+      if(data == null)
 	      return 0;
       else{
-         int leftHeight= getHeight_binaryNodeMethod(node.leftChild);
-         int rightHeight= getHeight_binaryNodeMethod(node.rightChild);
-         if (leftHeight>rightHeight)
+         if(hasLeftChild())
+         leftHeight = this.leftChild.getHeight_binaryNodeMethod();
+
+         if(hasRightChild())
+         rightHeight = this.rightChild.getHeight_binaryNodeMethod();
+
+        if(leftHeight > rightHeight)
             return(leftHeight + 1);
                else{
-                  return(rightHeight + 1);
-               }
+                     return(rightHeight + 1);
+        }
       }
+
    } // end getHeight
    
    /** -------------------------------------------------------------------- */
