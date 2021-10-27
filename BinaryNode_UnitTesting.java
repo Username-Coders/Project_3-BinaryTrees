@@ -154,21 +154,63 @@ public class BinaryNode_UnitTesting {
     /**
      * Testing Task 4
      *      Testing createTree2(BinaryTree<String> tree) from DriverBT.java
-     *          => Verifying the tree contents using post order traversal
+     *          => Verifying the tree print of method
+     *          => Verifying contents of tree using post order traversal print
      */
     @Test
-    public void createTree2_Testing() {
+    public void createTree2_Testing1() {
         
-        BinaryTree root = new BinaryTree<>();
-        DriverBT.createTree2(root);
+        BinaryTree<String> root1 = new BinaryTree<>();
+        DriverBT.createTree2(root1);
 
         // Used lineSeperator, normal \n did work, even if strings were seemingly identical
         String newLine = System.lineSeparator();
-        String expectedTree2 = "B" + newLine + "F" + newLine + "D" + newLine + "G" + newLine + "H" 
-        + newLine + "E" + newLine + "C" + newLine + "A";
+
+        String expectedTree_Post =
+        "Given Tree:\n" + newLine +
+		"     A         " + newLine +
+		"   /   \\      " + newLine +
+		"  B     C      " + newLine +
+		"       / \\    " + newLine +
+		"      D    E   " + newLine +
+		"     /    / \\ " + newLine +
+		"    F    G    H";
+
+
+        //String expectedTree2 = "B" + newLine + "F" + newLine + "D" + newLine + "G" + newLine + "H" 
+        //+ newLine + "E" + newLine + "C" + newLine + "A";
+
+        //root.postorderTraverse();
+
+        assertEquals(expectedTree_Post, outputString1.toString().trim());
 
     }
 
+    @Test
+    public void createTree2_Testing2() {
+
+        BinaryTree<String> root2 = new BinaryTree<>();
+        DriverBT.createTree2(root2);
+
+        // Used lineSeperator, normal \n did work, even if strings were seemingly identical
+        String newLine = System.lineSeparator();
+        String expectedTree2 = 
+        "Given Tree:\n" + newLine +
+		"     A         " + newLine +
+		"   /   \\      " + newLine +
+		"  B     C      " + newLine +
+		"       / \\    " + newLine +
+		"      D    E   " + newLine +
+		"     /    / \\ " + newLine +
+		"    F    G    H" + newLine + newLine +
+        "B" + newLine + "F" + newLine + "D" + newLine + "G" + newLine + "H" 
+        + newLine + "E" + newLine + "C" + newLine + "A";
+
+        root2.postorderTraverse();
+
+        assertEquals(expectedTree2, outputString1.toString().trim());
+
+    }
 
     /**
      * Only used by JUnit Tests
