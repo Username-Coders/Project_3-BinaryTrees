@@ -25,7 +25,7 @@ class BinaryNode<T>
    /** Retrieves the data portion of this node.
     * @param leftChild2
        @return  The object in the data portion of the node. */
-   public T getData(BinaryNode<T> leftChild2)
+   public T getData()
    {
       return data;
    } // end getData
@@ -132,22 +132,18 @@ class BinaryNode<T>
       int leftHeight = 0 ;
       int rightHeight = 0 ;
 
-      if(data == null)
-	      return 0;
-      else{
-         if(hasLeftChild())
-         leftHeight = this.leftChild.getHeight_binaryNodeMethod();
+      if(hasLeftChild())
+      leftHeight = this.leftChild.getHeight_binaryNodeMethod();
 
-         if(hasRightChild())
-         rightHeight = this.rightChild.getHeight_binaryNodeMethod();
+      if(hasRightChild())
+      rightHeight = this.rightChild.getHeight_binaryNodeMethod();
 
-        if(leftHeight > rightHeight)
-            return(leftHeight + 1);
-               else{
-                     return(rightHeight + 1);
-        }
+      if(leftHeight > rightHeight) {
+         return(leftHeight + 1);
+      } else {
+         return(rightHeight + 1);
       }
-
+                  
    } // end getHeight
    
    /** -------------------------------------------------------------------- */
