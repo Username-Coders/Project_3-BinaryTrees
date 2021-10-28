@@ -172,9 +172,14 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    private int getNumberOfNodes(BinaryNode<T> node)
    {
    	int nodeCount = 0;
-	if(node !=null)
-		nodeCount = 1 + (getNumberOfNodes(node.getLeftChild()) + getNumberOfNodes(node.getRightChild()));
-      	return nodeCount;
+
+	   if(node != null) {
+
+         nodeCount = 1 + getNumberOfNodes(node.getLeftChild()) + getNumberOfNodes(node.getRightChild());
+
+      }
+
+      return nodeCount;
    } // end getNumberOfNodes
    
    /** The following calls getNumberOfNodes_binaryNodeMethod() which is a recursive binaryNode class method
