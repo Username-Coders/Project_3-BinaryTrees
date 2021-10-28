@@ -37,7 +37,7 @@ CS 2400 Project 3 Binary Trees - Tree Operations
 ### Task 4: Implement method to create the 2nd testing example in client program
 
 <ul>
-  <li>public static void createTree2(BinaryTree<String> tree)  (Daniel Rodriguez)</li>
+  <li>public static void createTree2(BinaryTree<String> tree)  (John Salinas)</li>
 </ul>
 
 Screencast recording, talk about your code briefly, less than 3 minutes (All members)
@@ -46,4 +46,4 @@ Unit testing on added methods using unit test framework (John Salinas)
 
 
 ## iii) Link to screencast:
-
+[Click here for screencast](https://www.youtube.com/watch?v=Fmsa2qK3NjU) <br />
